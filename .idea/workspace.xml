@@ -287,11 +287,11 @@
       <recent name="com.lexsoft.fizionova.repository.mapper" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources/resultMaps" />
       <recent name="$PROJECT_DIR$/src/main/resources/email.templates" />
       <recent name="$PROJECT_DIR$/src/main/resources/images" />
       <recent name="$PROJECT_DIR$/src/main/java/com/lexsoft/fizionova/security" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/lexsoft/fizionova/config" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
@@ -762,7 +762,7 @@
       <workItem from="1513515631881" duration="65000" />
       <workItem from="1566413254753" duration="7000" />
       <workItem from="1591771292996" duration="22000" />
-      <workItem from="1591964150983" duration="309000" />
+      <workItem from="1591964150983" duration="655000" />
     </task>
     <task id="LOCAL-00001" summary="commit security">
       <created>1488738059288</created>
@@ -789,7 +789,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="339570000" />
+    <option name="totallyTimeSpent" value="339916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="646" y="0" width="634" height="800" extended-state="0" />
@@ -806,7 +806,7 @@
       <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35479453" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.49155405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38175675" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -931,7 +931,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lexsoft/fizionova/repository/mapper/EmployeeMapper.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lexsoft/fizionova/repository/EmployeeRepository.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/lexsoft/fizionova/config/RequestFilter.java" />
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/../master/src/main/java/org/fon/service/controller/WebServiseConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-150">
@@ -961,6 +960,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
