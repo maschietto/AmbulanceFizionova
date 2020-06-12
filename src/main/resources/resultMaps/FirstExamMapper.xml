@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lexsoft.fizionova.repository.mapper.FirstExamMapper">
+
+    <resultMap id="firstExamResultMap" type="com.lexsoft.fizionova.repository.model.FirstExam">
+        <result column="first_exam_id" property="idFirstExam"/>
+        <result column="name" property="name"/>
+        <result column="lastname" property="lastname"/>
+        <result column="phone_number" property="phoneNumber"/>
+        <result column="exam_start_time" property="examStartTime"/>
+        <result column="patient_id" property="idPatient"/>
+        <result column="therapy_id" property="idTherapy"/>
+    </resultMap>
+
+    <select id="findFirstExam" resultMap="firstExamResultMap">
+        SELECT  first_exam_id, name, lastname, phone_number, exam_start_time, patient_id, therapy_id FROM First_Exam
+
+            where first_exam_id = #{firstExamId};
+
+    </select>
+
+    <select id="findFirstExamsByDate" resultMap="firstExamResultMap">
+        SELECT  first_exam_id, name, lastname, phone_number, exam_start_time, patient_id, therapy_id FROM First_Exam
+        where exam_start_time between #{dateFrom,jdbcType=DATE} and #{dateTo,jdbcType=DATE}
+    </select>
+
+
+    <select id="findByParam" resultMap="firstExamResultMap">
+        SELECT * FROM First_Exam
+        <if test="name != null or lastname != null or phoneNumber != null or idTherapy != null">
+            <where>
+                <if test="name != null">name = #{name}</if>
+                <if test="lastname != null"> and lastname=#{lastname}</if>
+                <if test="phoneNumber != null"> and phone_number=#{phoneNumber}</if>
+                <if test="idTherapy != null"> and therapy_id=#{idTherapy}</if>
+            </where>
+        </if>
+    </select>
+
+    <insert id="insert">
+       INSERT INTO First_Exam(name,lastname, phone_number,exam_start_time, patient_id,therapy_id )VALUES(#{name},#{lastname},#{phoneNumber},#{examStartTime},#{idPatient}, #{idTherapy})
+       </insert>
+
+    <update id="update">
+       UPDATE First_Exam SET
+             name=#{name}, lastname = #{lastname}, phone_number=#{phoneNumber}, exam_start_time=#{examStartTime}, patient_id=#{idPatient}, therapy_id= #{idTherapy}
+             WHERE first_exam_id =#{firstExamId};
+    </update>
+
+    <delete id="deleteFirstExam">
+        DELETE FROM First_Exam where first_exam_id = #{idFirstExam}
+    </delete>
+
+    <delete id="deleteFirstExamByTherapyId">
+        DELETE FROM First_Exam where therapy_id = #{idTherapy}
+    </delete>
+
+</mapper>

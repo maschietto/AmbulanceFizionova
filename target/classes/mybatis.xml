@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <typeAliases>
+        <package name="com.lexsoft.fizionova.repository.model"/>
+    </typeAliases>
+    <mappers>
+        <mapper resource="resultMaps/EmployeeMapper.xml"/>
+        <mapper resource="resultMaps/PatientMapper.xml"/>
+        <mapper resource="resultMaps/DocumentMapper.xml"/>
+        <mapper resource="resultMaps/AdressMapper.xml"/>
+        <mapper resource="resultMaps/EnumTherapyTypeMapper.xml"/>
+        <mapper resource="resultMaps/TherapyMapper.xml"/>
+        <mapper resource="resultMaps/FirstExamMapper.xml"/>
+        <mapper resource="resultMaps/EnumDiagnoseTypeMapper.xml"/>
+        <mapper resource="resultMaps/HeartbeatMapper.xml"/>
+    </mappers>
+</configuration>

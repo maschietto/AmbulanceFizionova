@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lexsoft.fizionova.repository.mapper.PatientMapper">
+
+    <resultMap id="patientResultMap" type="com.lexsoft.fizionova.repository.model.Patient">
+        <result column="patient_id" property="idPatient"/>
+        <result column="name" property="name"/>
+        <result column="lastaname" property="lastname"/>
+        <result column="middlename" property="middlename"/>
+        <result column="personal_id" property="personalId"/>
+        <result column="email" property="email"/>
+        <result column="adress_id" property="adressId"/>
+        <result column="gender" property="gender"/>
+        <result column="phone_1" property="phone1"/>
+        <result column="phone_2" property="phone2"/>
+        <result column="path_to_patient_image" property="pathToPatientImage"/>
+        <result column="is_foreigner" property="isForeigner"/>
+        <result column="job_title" property="jobTitle"/>
+        <result column="employee_id" property="employeeId"/>
+        <result column="age" property="age"/>
+        <result column="create_date" property="dateCreate"/>
+    </resultMap>
+
+    <select id="findByParam" resultMap="patientResultMap">
+        SELECT * FROM Patient
+        <if test="name != null or lastname != null or phone1 != null">
+            <where>
+                <if test="name != null"> name=#{name}</if>
+                <if test="lastname != null"> and lastname=#{lastname}</if>
+                <if test="phone1 != null"> and phone_1=#{phone1}</if>
+            </where>
+        </if>
+    </select>
+
+    <insert id="insertPatient">
+       INSERT INTO Patient(name, lastname, middlename, personal_id, email, adress_id, gender,
+  phone_1, phone_2, path_to_patient_image, age, is_foreigner, job_title, employee_id) VALUES(#{name},#{lastname},#{middlename},#{personalId},#{email},
+      #{adressId}, #{gender}, #{phone1}, #{phone2}, #{pathToPatientImage}, #{age}, #{isForeigner}, #{jobTitle}, #{employeeId})
+    </insert>
+
+    <select id="findPatientById" resultMap="patientResultMap">
+        SELECT * from Patient where patient_id=#{id}
+    </select>
+    <select id="getLastInsertedPatientIdByEmployeeid" resultMap="patientResultMap">
+       select patient_id from Patient where create_date=(Select max(create_date) from Patient where employee_id=#{employeeId});
+
+    </select>
+
+
+    <update id="updatePatient">
+       UPDATE Patient SET
+            name=#{name},lastname=#{lastname},middlename=#{middlename},personal_id=#{personalId},email=#{email},
+      adress_id=#{adressId}, gender=#{gender}, phone_1=#{phone1}, phone_2=#{phone2}, path_to_patient_image=#{pathToPatientImage}, age=#{age},is_foreigner=#{isForeigner},job_title=#{jobTitle}, employee_id=#{employeeId}  WHERE patient_id =#{idPatient}
+    </update>
+
+
+</mapper>
